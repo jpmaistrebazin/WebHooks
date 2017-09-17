@@ -30,7 +30,7 @@ namespace Microsoft.AspNet.WebHooks
                 return default(T);
             }
 
-            // ??? Shouldn't condition be !typeof(T).IsAssignableFrom(typeof(JToken))?
+            // ??? Shouldn't condition be !typeof(T).IsAssignableFrom(typeof(JToken))? Have a JToken and want T.
             if (context.Data is JToken && !typeof(JToken).IsAssignableFrom(typeof(T)))
             {
                 try
